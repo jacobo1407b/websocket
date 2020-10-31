@@ -1,0 +1,19 @@
+<div>
+    <form action="/encript" method="POST">
+        <input type="text" name="text" placeholder="Texto" />
+        <input type="text" name="algoritm" placeholder="Algoritmo " />
+
+        <button type="submit">Crear</button>
+    </form>
+    {{#if result}}
+    <p>
+        {{result}}
+
+    </p>
+    <form action="desencri" method="POST">
+        <input type="hidden" name="enc" value={{result}} />
+        <button type="submit">Des</button>
+    </form>
+    {{/if}}
+
+</div>

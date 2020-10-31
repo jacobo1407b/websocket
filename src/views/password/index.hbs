@@ -1,0 +1,22 @@
+<div>
+    {{#if createhash1 }}
+    <form action="/ver" method="POST">
+        <input type="text" name="password" placeholder="password" />
+        <input type="hidden" name="hash" value={{createhash1}} placeholder={{createhash1}} />
+        <button>verificar</button>
+    </form>
+
+    {{#if response}}
+    <p>contraseña correcta</p>
+    {{else}}
+    <p>contraseña incorrecta</p>
+    {{/if}}
+
+    {{else}}
+    <form action="/hash" method="POST">
+        <input type="text" name="password" placeholder="password" />
+        <button>enviar</button>
+    </form>
+
+    {{/if}}
+</div>
